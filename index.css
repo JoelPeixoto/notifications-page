@@ -16,10 +16,6 @@ main {
   width: 70vw;
 }
 
-h1 {
-  margin: 0;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -39,6 +35,12 @@ h1 {
   display: flex;
 }
 
+.notification-counter > span {
+  font-size: 2em;
+  font-weight: 800;
+  margin: auto 0;
+}
+
 .counter {
   background-color: hsl(219, 85%, 26%);
   border-radius: 10px;
@@ -48,4 +50,25 @@ h1 {
   padding: 0.5em;
   text-align: center;
   width: 1.5em;
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .notification-counter > span {
+    font-size: 1.2em;
+  }
+
+  .counter {
+    height: 1.2em;
+    padding: 0.3em 0.4em;
+  }
+
+  .header > span {
+    font-size: 0.8rem;
+  }
 }
