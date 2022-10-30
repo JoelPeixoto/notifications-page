@@ -56,12 +56,22 @@ p {
 
 .notification {
   display: flex;
-  background-color: hsl(210, 60%, 98%);
+  flex-direction: column;
+  background-color: transparent;
   border-radius: 10px;
+  padding: 0 1em;
+}
+
+.unread {
+  background-color: hsl(210, 60%, 98%);
 }
 
 .notification:not(:first-child) {
   margin-top: 0.5em;
+}
+
+.notification-main-description {
+ display: flex;
 }
 
 .notification-description {
@@ -120,6 +130,16 @@ p {
   display: inline-block;
 }
 
+.private-message {
+  border: 1px solid hsl(219, 14%, 63%);
+  border-radius: 5px;
+  color: hsl(219, 14%, 63%);
+  margin-bottom: 1em;
+  padding: 1em;
+  align-self: flex-end;
+  width: 80%;
+}
+
 @media only screen and (max-width: 700px) {
   main {
     width: 100%;
@@ -144,5 +164,10 @@ p {
 
   .notification-description {
     font-size: 0.8em;
+  }
+
+  .private-message {
+    font-size: 0.8em;
+    width: 65%;
   }
 }
