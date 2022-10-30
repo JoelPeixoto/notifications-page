@@ -60,6 +60,10 @@ p {
   border-radius: 10px;
 }
 
+.notification:not(:first-child) {
+  margin-top: 0.5em;
+}
+
 .notification-description {
   display: flex;
   flex-direction: column;
