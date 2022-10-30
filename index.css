@@ -9,11 +9,15 @@ body {
 main {
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
-  left: 15%;
+  left: 25%;
   padding: 2em;
   position: absolute;
-  top: 15%;
-  width: 70vw;
+  top: 5%;
+  width: 50vw;
+}
+
+p {
+  margin: 0;
 }
 
 .header {
@@ -26,7 +30,9 @@ main {
   color: hsl(219, 14%, 63%);
 }
 
-.header > span:hover {
+.header > span:hover,
+.user-profile-link:hover,
+.notification-endpoint:hover {
   cursor: pointer;
   color:hsl(219, 85%, 26%);
 }
@@ -36,9 +42,59 @@ main {
 }
 
 .notification-counter > span {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 800;
   margin: auto 0;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  width: 100%;
+}
+
+.notification {
+  display: flex;
+  background-color: hsl(210, 60%, 98%);
+  border-radius: 10px;
+}
+
+.notification-description {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.notification-description > span {
+  color: hsl(219, 14%, 63%);
+  margin-top: 0.4em;
+}
+
+.individual-notification-description > span {
+  color: hsl(219, 14%, 63%);
+  margin: 0 0.4em;
+}
+
+.notification-endpoint {
+  text-decoration: none;
+  color: hsl(219, 12%, 42%);
+  font-weight: 800;
+}
+
+.avatar {
+  display: flex;
+}
+
+.avatar > img {
+  height: 60%;
+  margin: auto;
+}
+
+.user-profile-link {
+  text-decoration: none;
+  font-weight: 800;
+  color: black;
 }
 
 .counter {
@@ -52,11 +108,21 @@ main {
   width: 1.5em;
 }
 
+.notification-status {
+  border-radius: 50%;
+  background-color: hsl(1, 90%, 64%) !important;
+  height: 0.5em;
+  width: 0.5em;
+  display: inline-block;
+}
+
 @media only screen and (max-width: 700px) {
   main {
     width: 100%;
     left: 0;
     top: 0;
+    padding: 1em;
+    box-sizing: border-box;
   }
 
   .notification-counter > span {
@@ -70,5 +136,9 @@ main {
 
   .header > span {
     font-size: 0.8rem;
+  }
+
+  .notification-description {
+    font-size: 0.8em;
   }
 }
