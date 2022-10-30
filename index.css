@@ -105,6 +105,17 @@ p {
   margin: auto;
 }
 
+.target-picture {
+  display: flex;
+  margin-left: auto;
+}
+
+.target-picture > img {
+  height: 3em;
+  margin: auto 0;
+  width: 3em;
+}
+
 .user-profile-link {
   text-decoration: none;
   font-weight: 800;
