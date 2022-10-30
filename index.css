@@ -59,7 +59,7 @@ p {
   flex-direction: column;
   background-color: transparent;
   border-radius: 10px;
-  padding: 0 1em;
+  padding-right: 1em;
 }
 
 .unread {
